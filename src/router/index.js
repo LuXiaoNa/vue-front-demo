@@ -7,7 +7,7 @@ Vue.use(Router)
 export const constantRoutes = [{
         path: '/',
         component: Layout,
-        redirect: '/table/tableBase'
+        redirect: '/dashboard/analysis'
     },
     dashboardRouter,
     tableRouter,

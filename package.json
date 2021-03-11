@@ -13,7 +13,7 @@
     "dependencies": {
         "af-table-column": "^1.0.3",
         "core-js": "^3.6.5",
-        "echarts": "^4.8.0",
+        "echarts": "^4.9.0",
         "moment": "^2.27.0",
         "sockjs-client": "^1.4.0",
         "sortablejs": "^1.10.2",

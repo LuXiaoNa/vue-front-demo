@@ -16,3 +16,27 @@ export function getSellData(data) {
         data
     })
 }
+//获取销售额占比
+export function getPieChartData(data) {
+    return request({
+        url: '/table/pieChartData',
+        method: 'post',
+        data
+    })
+}
+//折线堆叠图
+export function getLineChartData(data) {
+    return request({
+        url: '/table/lineChartData',
+        method: 'post',
+        data
+    })
+}
+//用户分布
+export function getUserData(data) {
+    return request({
+        url: '/table/userData',
+        method: 'post',
+        data
+    })
+}
