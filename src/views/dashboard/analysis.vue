@@ -82,7 +82,7 @@ import {
   getPieChartData,
   getLineChartData,
   getUserData,
-} from "@/api/tabel/tabelBase.js";
+} from "@/api/dashboard/analysis.js";
 export default {
   data() {
     return {

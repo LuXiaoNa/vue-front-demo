@@ -1,11 +1,11 @@
 const Mock = require('mockjs')
 const { param2Obj } = require('@/utils/common.js')
 
-const demo = require('./modules/demo')
 const tableBase = require('./modules/tableBase')
+const analysis = require('./modules/analysis')
 
 const mocks = [
-    ...demo,
+    ...analysis,
     ...tableBase,
 ]
 
