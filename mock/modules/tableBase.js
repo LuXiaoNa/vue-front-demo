@@ -1,28 +1,35 @@
 const tableData = [{
         order: '1',
         name: 'lxj1号店',
+        visiter: 221,
         orderQuantity: 25,
         sellMoney: '2212'
     }, {
         order: '2',
         name: 'lxj2号店',
+        visiter: 201,
         orderQuantity: 21,
         sellMoney: '2200'
     }, {
         order: '3',
         name: 'lxj3号店',
+        visiter: 181,
         orderQuantity: 19,
         sellMoney: '1920'
     },
-    // {
-    //     order: '4',
-    //     name: 'lxj4号店',
-    //     sellMoney: '1890'
-    // }, {
-    //     order: '5',
-    //     name: 'lxj5号店',
-    //     sellMoney: '1782'
-    // }
+    {
+        order: '4',
+        name: 'lxj4号店',
+        visiter: 171,
+        orderQuantity: 21,
+        sellMoney: '1890'
+    }, {
+        order: '5',
+        name: 'lxj5号店',
+        visiter: 121,
+        orderQuantity: 16,
+        sellMoney: '1782'
+    }
 ];
 const echartData = {
     x: ["一月",

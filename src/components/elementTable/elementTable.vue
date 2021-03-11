@@ -1,5 +1,5 @@
 <template>
-  <div class="element-table">
+  <div>
     <el-form :model="copyDatas" ref="editRowForm" :rules="tableRules" size="mini">
       <el-table
         :data="tableEditFlag?copyDatas.data:disEditDatas"
@@ -57,7 +57,7 @@
                     :maxlength="dropCol[index].maxlength?dropCol[index].maxlength:''"
                   ></el-input>
                   <!-- 下拉框 -->
-                  <codelist
+                  <!-- <codelist
                     v-else-if="dropCol[index].type == 'select'&&dropCol[index].children.data==undefined &&!dropCol[index].children.load"
                     v-model="scope.row[dropCol[index].prop]"
                     @select="dropCol[index].children.select
@@ -97,7 +97,7 @@
                     :l="dropCol[index].children.l
                     ? dropCol[index].children.l
                     : 'dictionaryName'"
-                  ></codelist>
+                  ></codelist> -->
 
                   <el-select
                     v-else-if="dropCol[index].type == 'select'&&dropCol[index].children.load"

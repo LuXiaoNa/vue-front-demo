@@ -5,9 +5,6 @@ import 'element-ui/lib/theme-chalk/index.css';
 import store from './store';
 import moment from 'moment';
 
-// import tableCheckEdit from './components/tableCheckEdit/index';
-// Vue.use(tableCheckEdit);
-
 Vue.config.productionTip = false;
 // import hasRole from './directive/permission';
 // Vue.use(hasRole);
