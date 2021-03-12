@@ -8,12 +8,8 @@
       <el-table-column prop="sellMoney" label="销售额"> </el-table-column>
       <el-table-column fixed="right" label="操作" width="150">
         <template slot-scope="scope">
-          <el-button @click="editData(scope.row)" type="text" 
-            >编辑</el-button
-          >
-          <el-button type="text"  @click="deleteData(scope.row)"
-            >删除</el-button
-          >
+          <el-button @click="editData(scope.row)" type="text">编辑</el-button>
+          <el-button type="text" @click="deleteData(scope.row)">删除</el-button>
         </template>
       </el-table-column>
     </el-table>

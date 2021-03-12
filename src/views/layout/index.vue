@@ -5,7 +5,7 @@
         <sidebar class="sidebar-wrapper"></sidebar>
       </el-aside>
       <el-container  direction="vertical">
-        <el-header class="navbar" style="display:none;">
+        <el-header class="navbar" >
             <navbar/>
         </el-header>
         <el-main style="height: 100vh;">

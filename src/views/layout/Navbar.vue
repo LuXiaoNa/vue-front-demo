@@ -1,6 +1,6 @@
 <template>
     <div class="navbar">
-        <i class="el-icon-s-fold"/>机场IIS前端框架
+        <!-- <i class="el-icon-s-fold"/> -->
     </div>    
 </template>
 <script>
