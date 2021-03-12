@@ -3,7 +3,7 @@ import request from '@/utils/request'
 //柱状图获取数据
 export function getBarData(data) {
     return request({
-        url: '/table/getBarData',
+        url: '/analysis/getBarData',
         method: 'post',
         data
     })
@@ -11,7 +11,7 @@ export function getBarData(data) {
 //获取门店销售额排名
 export function getSellData(data) {
     return request({
-        url: '/table/sellData',
+        url: '/analysis/sellData',
         method: 'post',
         data
     })
@@ -19,7 +19,7 @@ export function getSellData(data) {
 //获取销售额占比
 export function getPieChartData(data) {
     return request({
-        url: '/table/pieChartData',
+        url: '/analysis/pieChartData',
         method: 'post',
         data
     })
@@ -27,7 +27,7 @@ export function getPieChartData(data) {
 //折线堆叠图
 export function getLineChartData(data) {
     return request({
-        url: '/table/lineChartData',
+        url: '/analysis/lineChartData',
         method: 'post',
         data
     })
@@ -35,7 +35,7 @@ export function getLineChartData(data) {
 //用户分布
 export function getUserData(data) {
     return request({
-        url: '/table/userData',
+        url: '/analysis/userData',
         method: 'post',
         data
     })

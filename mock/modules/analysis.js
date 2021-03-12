@@ -111,7 +111,7 @@ const userData = {
     y: [11, 12, 19, 23, 18, 14, 21, 30, 21, 10, 22, 12, 9, 20, 33, 41, 23, 25, 27, 13, 44, 13, 15]
 };
 module.exports = [{
-        url: '/table/getBarData',
+        url: '/analysis/getBarData',
         type: 'post',
         response: () => {
             return {
@@ -121,7 +121,7 @@ module.exports = [{
         }
     },
     {
-        url: '/table/sellData',
+        url: '/analysis/sellData',
         type: 'post',
         response: () => {
             return {
@@ -132,7 +132,7 @@ module.exports = [{
         }
     },
     {
-        url: '/table/pieChartData',
+        url: '/analysis/pieChartData',
         type: 'post',
         response: () => {
             return {
@@ -142,7 +142,7 @@ module.exports = [{
         }
     },
     {
-        url: '/table/lineChartData',
+        url: '/analysis/lineChartData',
         type: 'post',
         response: () => {
             return {
@@ -152,7 +152,7 @@ module.exports = [{
         }
     },
     {
-        url: '/table/userData',
+        url: '/analysis/userData',
         type: 'post',
         response: () => {
             return {

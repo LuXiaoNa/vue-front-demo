@@ -15,6 +15,14 @@ const formRouter = {
         meta: {
             title: '基础表单'
         }
+    }, {
+        path: 'advancedForm',
+        component: () =>
+            import ('@/views/form/advancedForm'),
+        name: 'advancedForm',
+        meta: {
+            title: '高级表单'
+        }
     }, ]
 }
 export default formRouter
