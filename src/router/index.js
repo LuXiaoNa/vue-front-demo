@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import dashboardRouter from './modules/dashboard'
 import tableRouter from './modules/table'
+import formRouter from './modules/form'
 import Layout from '@/views/layout/index.vue'
 Vue.use(Router)
 export const constantRoutes = [{
@@ -11,6 +12,7 @@ export const constantRoutes = [{
     },
     dashboardRouter,
     tableRouter,
+    formRouter,
     {
         path: '/404',
         component: () =>
