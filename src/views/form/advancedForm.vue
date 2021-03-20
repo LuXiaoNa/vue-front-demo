@@ -181,16 +181,25 @@
           <el-table-column prop="name" label="成员姓名"> </el-table-column>
           <el-table-column prop="number" label="工号"> </el-table-column>
           <el-table-column prop="department" label="所属部门">
+              <template slot-scope="scope">
+                  <span v-if="!isEdit">{{scope.row.department}}</span>
+                  <span v-else><el-input v-model="scope.row.department"></el-input> </span>
+              </template>
           </el-table-column>
           <el-table-column prop="time" label="入职时长"> </el-table-column>
           <el-table-column fixed="right" label="操作" width="150">
             <template slot-scope="scope">
-              <el-button @click="editData(scope.row)" type="text"
+              <el-button v-if="!isEdit" @click="editData" type="text"
                 >编辑</el-button
               >
-              <el-button type="text" @click="deleteData(scope.row)"
-                >删除</el-button
+                 <el-button v-if="isEdit" @click="saveOneData" type="text"
+                >保存</el-button
               >
+              <el-button
+                type="text"
+                size="small"
+                @click.native.prevent="deleteData(scope.$index, tableData)"
+                >删除</el-button>
             </template>
           </el-table-column>
         </el-table>
@@ -212,6 +221,7 @@ export default {
     return {
       storeForm: {},
       taskForm: {},
+      isEdit:false,
       spyOptions: [
         {
           value: "选项1",
@@ -248,6 +258,7 @@ export default {
     };
   },
   methods: {
+      //初始化数据
     initData() {
       getTableData().then((res) => {
         if (res.data != null) {
@@ -255,10 +266,27 @@ export default {
         }
       });
     },
+    //重置
     resetData() {
       this.storeForm = {};
       this.taskForm = {};
+      this.initData()
     },
+    //编辑表格
+    editData(row){
+        console.log(row)
+        this.isEdit=true
+    },
+    //保存单条数据
+    saveOneData(row){
+        this.isEdit=false;
+        console.log(row)
+    },
+    //删除表格
+    deleteData(index, rows) {
+      rows.splice(index, 1);
+    },
+    //保存表单
     saveData() {
       var query = Object.assign(this.taskForm, this.storeForm);
       query.tableData = this.tableData;

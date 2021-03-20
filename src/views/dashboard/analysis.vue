@@ -104,6 +104,7 @@ export default {
       } else if (this.activeName == "second") {
         this.echartTitle = "访问量";
         this.barColor = ["#FF3030"];
+        console.log(document.getElementById("visiteChart"));
         this.mySellChart = echarts.init(document.getElementById("visiteChart"));
         this.sellInitData();
       }
