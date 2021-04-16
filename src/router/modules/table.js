@@ -34,6 +34,15 @@ const tableRouter = {
                 title: '导出表格'
             }
         },
+        {
+            path: 'sortTable',
+            component: () =>
+                import ('@/views/table/sortTable'),
+            name: 'sortTable',
+            meta: {
+                title: '拖拽表格'
+            }
+        },
     ]
 }
 export default tableRouter

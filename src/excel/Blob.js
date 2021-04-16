@@ -7,7 +7,9 @@
         try {
             new Blob;
             return;
-        } catch (e) {}
+        } catch (e) {
+            console.log(e)
+        }
     }
 
     // Internally we use a BlobBuilder implementation to base Blob off of

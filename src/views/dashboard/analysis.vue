@@ -3,10 +3,10 @@
     <el-tabs v-model="activeName" @tab-click="handleClick">
       <el-tab-pane label="销售额" name="first">
         <el-row>
-          <el-col :span="18">
-            <div id="sellChart" style="height: 300px; width: 1000px"></div>
+          <el-col :span="16">
+            <div id="sellChart" style="height: 300px; width: 600px"></div>
           </el-col>
-          <el-col :span="6">
+          <el-col :span="8">
             <h4>门店销售额排名</h4>
             <el-table :data="tableData">
               <el-table-column prop="order" label="排名"> </el-table-column>
@@ -21,10 +21,10 @@
       </el-tab-pane>
       <el-tab-pane label="访问量" name="second">
         <el-row>
-          <el-col :span="18">
-            <div id="visiteChart" style="height: 300px; width: 1000px"></div>
+          <el-col :span="16">
+            <div id="visiteChart" style="height: 300px; width: 600px"></div>
           </el-col>
-          <el-col :span="6">
+          <el-col :span="8">
             <h4>门店访问量排名</h4>
             <el-table :data="tableData">
               <el-table-column prop="order" label="排名"> </el-table-column>
@@ -68,7 +68,7 @@
           <div slot="header" class="clearfix">
             <span>用户分布</span>
           </div>
-          <div id="userChart" style="height: 400px; width: 1400px"></div>
+          <div id="userChart" style="height: 400px; width: 1000px"></div>
         </el-card>
       </el-col>
     </el-row>
@@ -140,7 +140,7 @@ export default {
             {
               data: yData,
               type: "bar",
-              barwidth: "60%",
+              barwidth: "40%",
             },
           ],
         };
@@ -163,7 +163,7 @@ export default {
           },
           legend: {
             top: "5%",
-            left: "center",
+            //left: "center",
           },
           series: [
             {
@@ -209,7 +209,7 @@ export default {
             data: ["家用电器", "个护健康", "服饰箱包", "母婴产品", "其他"],
           },
           grid: {
-            left: "3%",
+            left: "1%",
             right: "4%",
             bottom: "3%",
             containLabel: true,
