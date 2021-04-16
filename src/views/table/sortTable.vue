@@ -54,7 +54,7 @@ export default {
       const tbody = document.querySelector(".el-table__body-wrapper tbody");
       const _this = this;
       Sortable.create(tbody, {
-          dragClass: "sortable-drag",  // 正在被拖拽中的css类名
+        dragClass: "sortable-drag", // 正在被拖拽中的css类名
         onEnd({ newIndex, oldIndex }) {
           const currRow = _this.tableData.splice(oldIndex, 1)[0];
           _this.tableData.splice(newIndex, 0, currRow);
@@ -78,7 +78,7 @@ export default {
 };
 </script>
 <style>
-.sortable-drag{
-  color:red;
+.sortable-drag {
+  color: red;
 }
 </style>
