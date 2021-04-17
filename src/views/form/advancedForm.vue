@@ -182,17 +182,17 @@
           <el-table-column prop="number" label="工号"> </el-table-column>
           <el-table-column prop="department" label="所属部门">
               <template slot-scope="scope">
-                  <span v-if="!isEdit">{{scope.row.department}}</span>
+                  <span v-if="!scope.row.isEdit">{{scope.row.department}}</span>
                   <span v-else><el-input v-model="scope.row.department"></el-input> </span>
               </template>
           </el-table-column>
           <el-table-column prop="time" label="入职时长"> </el-table-column>
           <el-table-column fixed="right" label="操作" width="150">
             <template slot-scope="scope">
-              <el-button v-if="!isEdit" @click="editData" type="text"
+              <el-button v-if="!scope.row.isEdit" @click="editData" type="text"
                 >编辑</el-button
               >
-                 <el-button v-if="isEdit" @click="saveOneData" type="text"
+                 <el-button v-else @click="saveOneData" type="text"
                 >保存</el-button
               >
               <el-button
@@ -221,7 +221,7 @@ export default {
     return {
       storeForm: {},
       taskForm: {},
-      isEdit:false,
+     // isEdit:false,
       spyOptions: [
         {
           value: "选项1",
@@ -275,11 +275,11 @@ export default {
     //编辑表格
     editData(row){
         console.log(row)
-        this.isEdit=true
+        row.isEdit=true
     },
     //保存单条数据
     saveOneData(row){
-        this.isEdit=false;
+        row.isEdit=false;
         console.log(row)
     },
     //删除表格

@@ -8,6 +8,15 @@ const dashboardRouter = {
         title: '仪表盘',
     },
     children: [{
+            path: 'monitor',
+            component: () =>
+                import ('@/views/dashboard/monitor'),
+            name: 'monitor',
+            meta: {
+                title: '监控页'
+            }
+        },
+        {
             path: 'analysis',
             component: () =>
                 import ('@/views/dashboard/analysis'),
@@ -16,15 +25,7 @@ const dashboardRouter = {
                 title: '分析页'
             }
         },
-        {
-            path: 'workplace',
-            component: () =>
-                import ('@/views/dashboard/workplace'),
-            name: 'workplace',
-            meta: {
-                title: '工作台'
-            }
-        },
+
     ]
 }
 export default dashboardRouter

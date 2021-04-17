@@ -13,7 +13,7 @@
         <template slot-scope="scope">
           <el-button @click="editData(scope.row)" type="text">编辑</el-button>
           <el-button type="text" @click="deleteData(scope.row)">删除</el-button>
-        </template>
+        </template> 
       </el-table-column>
     </el-table>
 

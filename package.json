@@ -22,6 +22,7 @@
         "v-fit-columns": "^0.1.1",
         "vee-validate": "^3.3.9",
         "vue": "^2.6.11",
+        "vue-seamless-scroll": "^1.1.23",
         "xlsx": "^0.16.9"
     },
     "devDependencies": {
@@ -30,6 +31,7 @@
         "@vue/cli-service": "~4.4.0",
         "axios": "^0.19.2",
         "babel-eslint": "^10.1.0",
+        "comutils": "^1.1.19",
         "element-ui": "^2.13.2",
         "eslint": "^6.7.2",
         "eslint-plugin-vue": "^6.2.2",

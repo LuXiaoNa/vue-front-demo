@@ -3,10 +3,12 @@ const { param2Obj } = require('@/utils/common.js')
 
 const tableBase = require('./modules/tableBase')
 const analysis = require('./modules/analysis')
+const monitor = require('./modules/monitor')
 const form = require('./modules/form')
 
 const mocks = [
     ...analysis,
+    ...monitor,
     ...tableBase,
     ...form,
 ]
