@@ -1,49 +1,35 @@
 <template>
   <div class="hello">
-    <span>今日情况</span>
-    <div style="padding-top: 30px; padding-left: 10px; padding-right: 10px">
+    <span><i class="el-icon-d-arrow-right"></i>今日情况</span>
+    <div style="padding-top: 20px; padding-left: 10px; padding-right: 10px">
       <span>购买</span><span>/浏览数</span>
       <el-progress :stroke-width="15" :percentage="perc"></el-progress>
-      <span>{{ this.situationData.buy }}/</span>
+      <span>{{ situationData.buy }}/</span>
       <span style="fontsize: 8px; color: grey">{{
-        this.situationData.browse
+        situationData.browse
       }}</span>
     </div>
-    <div>
-      <span style="padding-left: 15%; padding-right: 15%">订单</span>
-      <span>发货</span>
-      <span style="padding-left: 15%; padding-right: 15%">销售额</span>
-    </div>
-    <div>
-      <span style="padding-left: 13%">{{ this.situationData.order }}</span>
-      <span style="padding-left: 21%; fontsize: 8px; color: grey">{{
-        this.situationData.ship
+    <el-row style="margin:10px 0px">
+      <el-col :span="5" :offset="2">
+        <span>订单</span>
+        <span>{{ situationData.order }}</span>
+        <span style="margin-left:15px;color:grey"> 件</span>
+      </el-col>
+          <el-col :span="5" :offset="2">
+        <span>发货</span>
+        <span>{{
+       situationData.ship
       }}</span>
-      <span style="padding-left: 17%; padding-right: 15%">{{
+        <span style="margin-left:12px;color:grey">件</span>
+      </el-col>
+       <el-col :span="6" :offset="2">
+        <span>销售额</span>
+        <span>{{
         this.situationData.sales
       }}</span>
-    </div>
-    <div style="padding-bottom: 10px">
-      <span
-        style="
-          padding-left: 15%;
-          padding-right: 15%;
-          fontsize: 8px;
-          color: grey;
-        "
-        >件</span
-      >
-      <span style="padding-left: 6%; fontsize: 8px; color: grey">件</span>
-      <span
-        style="
-          padding-left: 20%;
-          padding-right: 15%;
-          fontsize: 8px;
-          color: grey;
-        "
-        >元</span
-      >
-    </div>
+        <span style="margin-left:12px;color:grey">元</span>
+      </el-col>
+    </el-row>
   </div>
 </template>
 <script>

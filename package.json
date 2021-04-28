@@ -22,7 +22,6 @@
         "v-fit-columns": "^0.1.1",
         "vee-validate": "^3.3.9",
         "vue": "^2.6.11",
-        "vue-seamless-scroll": "^1.1.23",
         "xlsx": "^0.16.9"
     },
     "devDependencies": {

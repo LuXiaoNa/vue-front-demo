@@ -5,54 +5,27 @@
         <el-card :body-style="{ padding: '0px' }">
           <!-- 今日情况 -->
           <todaySituation></todaySituation>
-          <!-- <span>今日情况</span>
-          <div style="padding-top:30px;padding-left:10px;padding-right:10px;">
-            <span>购买</span><span>/浏览数</span>
-            <el-progress :stroke-width="15" :percentage="perc"></el-progress>
-            <span>{{this.flightData.execNum}}/</span>
-            <span style="fontSize:8px;color:grey">{{this.flightData.planNum}}</span>
-          </div>
-          <div>
-            <span style="padding-left:15%;padding-right:15%">进港</span>
-            <span>离港</span>
-            <span style="padding-left:15%;padding-right:15%">取消</span>
-          </div>
-          <div>
-            <span style="padding-left:13%;">{{this.flightData.arrNum}}/</span>
-            <span style="color:grey;fontSize:8px">{{this.flightData.arrPlanNum}}</span>
-            <span style="padding-left:9%;">{{this.flightData.depNum}}/</span>
-            <span style="fontSize:8px;color:grey">{{this.flightData.depPlanNum}}</span>
-            <span style="padding-left:17%;padding-right:15%">{{this.flightData.cancelNum}}</span>
-          </div>
-          <div style="padding-bottom:10px">
-            <span style="padding-left:15%;padding-right:15%;fontSize:8px;color:grey">架次</span>
-            <span style="padding-left:4%;fontSize:8px;color:grey">架次</span>
-            <span style="padding-left:18%;padding-right:15%;fontSize:8px;color:grey">架次</span>
-          </div> -->
         </el-card>
       </el-col>
       <el-col :span="14">
         <!-- 机场综合情况组件 -->
-        <airportSituation></airportSituation>
+        <situation></situation>
       </el-col>
       <el-col :span="5">
         <el-card :body-style="{ padding: '0px' }">
-          <span>MDRS信息</span>
+          <span> <i class="el-icon-d-arrow-right"></i>基本信息</span>
           <vue-seamless-scroll
-            :data="mdrsListData"
+            :data="baseData"
             :class-option="classOption"
             style="height:150px;overflow:hidden;margin-left:10px;margin-right:10px"
           >
-            <div v-for="item in mdrsListData" :key="item.id">
+            <div v-for="item in baseData" :key="item.id">
               <div style="margin-top:10px;">
                 <span style="color:grey;fontSize:10px;">{{item.publishTime}}</span>
-                <span style="fontSize:12px;margin-left:45%">{{item.publishUnit}}</span>
+                <span style="fontSize:12px;margin-left:8%">{{item.publishUnit}}</span>
               </div>
-              <div style="fontSize:12px;">{{item.influList[0].content}}</div>
+              <div style="fontSize:12px;">{{item.contentData[0].content}}</div>
             </div>
-            <div
-              style="width:310px;border-bottom:1px solid #696969;margin-top:10px;margin-bottom:20px"
-            ></div>
           </vue-seamless-scroll>
         </el-card>
       </el-col>
@@ -60,7 +33,7 @@
     <el-row :gutter="22" style="margin-top:5px">
       <el-col :span="5">
         <el-card :body-style="{ padding: '0px' }">
-          <span>流控受影响情况</span>
+          <span><i class="el-icon-d-arrow-right"></i>流控受影响情况</span>
           <vue-seamless-scroll
             :data="flowControlData"
             :class-option="classOption"
@@ -94,7 +67,7 @@
       </el-col>
       <el-col :span="10">
         <el-card :body-style="{ padding: '0px' }">
-          <span>当日放行情况</span>
+          <span><i class="el-icon-d-arrow-right"></i>当日放行情况</span>
           <div style="margin-top:5%;margin-bottom:5%;position:relative">
             <span
               style="position:absolute;margin-left:17%;margin-top:5%;color:grey;fontSize:15px"
@@ -122,7 +95,7 @@
       <el-col :span="4">
         <el-card :body-style="{ padding: '0px' }">
           <div class="flex">
-            <span>机位监控</span>
+            <span><i class="el-icon-d-arrow-right"></i>机位监控</span>
             <div class="flex1"></div>
             <div class="flex2">占用</div>
             <div class="flex3"></div>
@@ -144,7 +117,7 @@
       </el-col>
       <el-col :span="5" style="margin-top:-10px">
         <el-card :body-style="{ padding: '0px' }">
-          <span>气象概况</span>
+          <span><i class="el-icon-d-arrow-right"></i>气象概况</span>
           <span style="margin-left:65%;fontSize:14px;color:grey">
             <i class="el-icon-location-outline"></i>淮安
           </span>
@@ -156,7 +129,7 @@
     <el-row :gutter="22">
       <el-col :span="5" style="margin-top:6px">
         <el-card :body-style="{ padding: '0px' }">
-          <span>专机要客</span>
+          <span><i class="el-icon-d-arrow-right"></i>专机要客</span>
           <!-- <div style="height:250px"></div> -->
           <vue-seamless-scroll
             :data="VipGuestData"
@@ -230,20 +203,19 @@
       </el-col>
       <el-col :span="10" style="margin-top:-235px">
         <el-card :body-style="{ padding: '0px' }">
-          <span>流量预测信息</span>
+          <span><i class="el-icon-d-arrow-right"></i>流量预测信息</span>
           <flow></flow>
         </el-card>
       </el-col>
       <el-col :span="4" style="margin-top:-42px">
         <el-card :body-style="{ padding: '0px' }">
-          <span>航班保障情况</span>
-          <!-- <div style="height:290px"></div> -->
+          <span><i class="el-icon-d-arrow-right"></i>航班保障情况</span>
           <flight></flight>
         </el-card>
       </el-col>
       <el-col :span="5" style="margin-top:-207px">
         <el-card :body-style="{ padding: '0px' }">
-          <span>值班信息</span>
+         <!-- 值班信息 -->
           <duty style="height:450px;overflow:auto;"></duty>
         </el-card>
       </el-col>
@@ -253,23 +225,23 @@
 <script>
 import todaySituation from "./todaySituation";
 import processBar from "./processBar";
-import airportSituation from "./airportSituation";
+import situation from "./situation";
 import flow from "./flow";
 import flight from "./flight";
 import weather from "./weather";
 import duty from "./duty";
 import vueSeamlessScroll from "./scroll";
-// import {
-//   flightStatus,
+import {
+  baseData,
 //   releaseData,
-//seatControl
-// } from "@/api/dashboard/dashboard.js";
+// seatControl
+} from "@/api/dashboard/monitor.js";
 import { date2Str } from "@/utils/common.js";
 export default {
   components: {
     todaySituation,
     processBar,
-    airportSituation,
+    situation,
     flow,
     flight,
     weather,
@@ -278,52 +250,12 @@ export default {
   },
   data() {
     return {
-      // flightData: {},
       perc: "",
       nomalRate: "",
       releaseRate: "",
       avgRate: "",
       processBarModel: undefined,
-      mdrsListData: [
-        {
-          publishTime: "2021-4-13 21:12:10",
-          publishUnit: "AOT部门",
-          influList: [
-            {
-              startTime: "2021-4-7 14:00",
-              endTime: "2021-4-7 16:00",
-              content:
-                "预计从12:00开始广州机场通行能力将下降(20%),通行能力预期将于16:00恢复",
-              level: "2"
-            }
-          ]
-        },
-        {
-          publishTime: "2021-4-13 21:12:10",
-          publishUnit: "TOC部门",
-          influList: [
-            {
-              startTime: "2021-4-7 14:00",
-              endTime: "2021-4-7 16:00",
-              content: "",
-              level: "4"
-            }
-          ]
-        },
-        {
-          publishTime: "2021-4-13 21:12:10",
-          publishUnit: "AOC部门",
-          influList: [
-            {
-              startTime: "2021-4-7 14:00",
-              endTime: "2021-4-7 16:00",
-              content:
-                "预计从12:00开始广州机场通行能力将下降(20%),通行能力预期将于16:00恢复",
-              level: "5"
-            }
-          ]
-        }
-      ],
+      baseData:[],
       flowControlData: [
         {
           flightNum: "MU3331",
@@ -424,23 +356,12 @@ export default {
         return "";
       }
     },
-    //今日航班执行情况
-    // flightStatus() {
-    //   this.flightData = {
-    //     planNum: "40",
-    //     execNum: "10",
-    //     arrPlanNum: "100",
-    //     arrNum: "39",
-    //     depPlanNum: "120",
-    //     depNum: "21",
-    //     cancelNum: "23"
-    //   };
-    //   this.perc = (this.flightData.execNum / this.flightData.planNum) * 100;
-    //   //   flightStatus().then(res => {
-    //   //     console.log(res);
-    //   //     this.flightData = res.data;
-    //   //   });
-    // },
+    //基础信息
+     initBaseData(){ 
+       baseData().then(res=>{
+         this.baseData=res.data
+       })
+     },
     //当日放行情况
     releaseData() {
       this.nomalRate = 20;
@@ -506,6 +427,7 @@ export default {
     }
   },
   mounted() {
+    this.initBaseData();
     this.flightStatus();
     this.releaseData();
     this.seatControl();
