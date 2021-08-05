@@ -23,6 +23,6 @@ const formRouter = {
         meta: {
             title: '高级表单'
         }
-    }, ]
+    }]
 }
 export default formRouter

@@ -3,10 +3,10 @@
     <el-tabs v-model="activeName" @tab-click="handleClick">
       <el-tab-pane label="销售额" name="first">
         <el-row>
-          <el-col :span="16">
+          <el-col :span="12">
             <div id="sellChart" style="height: 300px; width: 600px"></div>
           </el-col>
-          <el-col :span="8">
+          <el-col :span="12">
             <h4>门店销售额排名</h4>
             <el-table :data="tableData">
               <el-table-column prop="order" label="排名"> </el-table-column>
@@ -21,10 +21,10 @@
       </el-tab-pane>
       <el-tab-pane label="访问量" name="second">
         <el-row>
-          <el-col :span="16">
+          <el-col :span="12">
             <div id="visiteChart" style="height: 300px; width: 600px"></div>
           </el-col>
-          <el-col :span="8">
+          <el-col :span="12">
             <h4>门店访问量排名</h4>
             <el-table :data="tableData">
               <el-table-column prop="order" label="排名"> </el-table-column>
@@ -62,13 +62,13 @@
         </el-card>
       </el-col>
     </el-row>
-    <el-row>
-      <el-col>
+    <el-row style="margin-top:10px">
+      <el-col :span="24">
         <el-card shadow="never">
           <div slot="header" class="clearfix">
             <span>用户分布</span>
           </div>
-          <div id="userChart" style="height: 400px; width: 1000px"></div>
+          <div id="userChart" style="height: 400px; width: 98%"></div>
         </el-card>
       </el-col>
     </el-row>

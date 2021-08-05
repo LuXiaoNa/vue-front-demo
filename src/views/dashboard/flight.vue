@@ -1,18 +1,16 @@
 <template>
   <div class="flight">
+    <span>
+        <i class="el-icon-d-arrow-right"></i>航班保障情况
+    </span>
     <div id="barCharts" style="height:290px;width:100%"></div>
   </div>
 </template>
 <script>
-// import {
-//   flightData
-// } from "@/api/dashboard/dashboard.js";
 import echarts from "echarts";
 export default {
   name: "flight",
-  data() {
-    return {};
-  },
+  props:["flightData"],
   methods: {
     initData() {
       var myFlightChart = echarts.init(document.getElementById("barCharts"));
@@ -24,9 +22,6 @@ export default {
         legend: {
           orient: "vertical",
           left: "right",
-          textStyle: {
-            color: "White"
-          }
         },
         series: [
           {
@@ -46,11 +41,6 @@ export default {
         ]
       };
       myFlightChart.setOption(option);
-      //   flightData().then(res => {
-      //     console.log(res.data);
-      //     if (res.data != null) {
-      //     }
-      //   });
     }
   },
   mounted() {

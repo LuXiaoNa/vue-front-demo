@@ -1,8 +1,11 @@
 <template>
-  <div  id="ProcessBar" >
+  <div id="ProcessBar">
     <div>
       <div>
-        <span style="fontSize:16px; margin-left:3%;margin-right:2%" v-if="seatType!=null">{{seatType}}类</span>
+        <span
+          style="fontSize:16px; margin-left:3%;margin-right:2%"
+          v-if="seatType!=null"
+        >{{seatType}}类</span>
         <span style="fontSize:12px;margin-right:53%;">共{{seatNum}}个</span>
         <span style="color:#0091ff">{{preData}}</span>
       </div>
@@ -31,15 +34,15 @@ export default {
     notUseNum: { type: Number },
     freeNum: { type: Number }
   },
-  computed:{
-      preData(){
-          if(this.freeNum!=null&&this.seatNum!=null){
-              var pre = Math.round(this.freeNum/this.seatNum*100)
-              return pre+'%'
-          }else{
-              return ''
-          }
+  computed: {
+    preData() {
+      if (this.freeNum != null && this.seatNum != null) {
+        var pre = Math.round((this.freeNum / this.seatNum) * 100);
+        return pre + "%";
+      } else {
+        return "";
       }
+    },
   },
   data() {
     return {
@@ -47,13 +50,12 @@ export default {
         width: this.usedNum + "%"
       },
       notUse: {
-        width: this.notUseNum+ "%"
+        width: this.notUseNum + "%"
       }
     };
   },
   components: {},
-  methods: {
-  }
+  methods: {}
 };
 </script>
 <style scoped>
@@ -72,14 +74,11 @@ export default {
 }
 .pB_Container div {
   float: left;
-  /* border-radius: 8px; */
 }
 .first {
   background-color: #0091ff;
-  padding-right: 10px;
 }
 .second {
   background-color: #65f6ff;
-  padding-right: 10px;
 }
 </style>

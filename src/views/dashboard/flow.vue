@@ -1,24 +1,25 @@
 <template>
   <div class="flow">
-    <div id="flowEcharts" style="height:490px;width:100%"></div>
+     <span>
+      <i class="el-icon-d-arrow-right"></i>流量预测信息
+    </span>
+    <div id="flowEcharts" style="height: calc(58vh - 60px);;width:100%"></div>
   </div>
 </template>
 <script>
-// import {
+// import { 
 //   flowData
 // } from "@/api/dashboard/dashboard.js";
 import echarts from "echarts";
 export default {
   name: "flow",
+  props:["flowData"],
   data() {
     return {};
   },
   methods: {
     initData() {
       var myFlowChart = echarts.init(document.getElementById("flowEcharts"));
-      //   flowData().then(res => {
-      //        console.log(res.data);
-      // if (res.data != null) {
       var colors = ["#77C1E7", "#058DD2", "#B7ACF5", "#725FE0"];
       const option = {
         color: colors, //下面这种直接配置演示也行
@@ -58,12 +59,8 @@ export default {
         },
         legend: {
           data: ["计划到港", "实际到港", "计划离港", "实际离港"],
-          textStyle:{
-              color:"White"
-          },
           left: "right" //组件离容器左侧的距离，可以是left,center,right，也可以是像素px和百分比10%
         },
-        //backgroundColor: '#00199',//整个绘图背景色
         grid: {
           left: "3%",
           right: "4%",
@@ -100,43 +97,30 @@ export default {
             axisTick: {
               show: false
             },
-            // axisLabel: {
-            //   textStyle: {
-            //     color: "#4C4C4C"
-            //   },
-            //   //让x轴左边的数显示为正数
-            //   formatter: function(v) {
-            //     return v > 0 ? v : -v;
-            //   }
-            // }
           }
         ],
         series: [
           {
             name: "计划到港",
             type: "bar",
-            //stack: '总量',
             label: {
               show: true,
               position: "top"
             },
-            data: [320, 302, 341, 374, 390, 450, 420,150,241,310]
+            data: [30, 32, 34, 37, 39, 45, 42,15,24,31]
           },
           {
             name: "实际到港",
             type: "bar",
-            //stack: '总量',
             label: {
               show: true,
               position: "top"
             },
-            data: [200, 170, 240, 244, 200, 220, 210,241,150,240]
+            data: [20, 17, 20, 24, 20, 22, 20,21,10,24]
           },
           {
             name: "计划离港",
             type: "bar",
-            //  stack: '总量',
-            //position: 'left',
             label: {
               show: true, //控制柱状图是否显示数值
               position: "bottom",
@@ -145,12 +129,11 @@ export default {
                 return -params.value;
               }
             },
-            data: [-120, -132, -101, -134, -190, -230, -210,-150,-210,-160]
+            data: [-12, -32, -11, -13, -19, -30, -20,-15,-20,-16]
           },
           {
             name: "实际离港",
             type: "bar",
-            //  stack: '总量',
             label: {
               show: true, //控制柱状图是否显示数值
               position: "bottom",
@@ -159,14 +142,11 @@ export default {
                 return -params.value;
               }
             },
-            data: [-130, -142, -111, -124, -140, -210, -230,-170,-213,-180]
+            data: [-13, -12, -11, -12, -14, -21, -23,-17,-21,-18]
           }
         ]
       };
       myFlowChart.setOption(option);
-      // };
-
-      //   });
     }
   },
   mounted() {

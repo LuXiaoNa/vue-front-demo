@@ -1,6 +1,6 @@
 <template>
   <div id="hello">
-    <el-row>
+    <el-row :gutter="20">
       <el-card shadow="never">
         <div slot="header" class="clearfix">
           <span>仓库管理</span>
@@ -84,7 +84,7 @@
         </div>
       </el-card>
     </el-row>
-    <el-row style="margin-top: '100px'">
+    <el-row :gutter="20" style="margin-top:10px;margin-bottom:10px">
       <el-card shadow="never">
         <div slot="header" class="clearfix">
           <span>任务管理</span>
@@ -172,7 +172,7 @@
         </div>
       </el-card>
     </el-row>
-    <el-row>
+    <el-row :gutter="20">
       <el-card shadow="never">
         <div slot="header" class="clearfix">
           <span>成员管理</span>
