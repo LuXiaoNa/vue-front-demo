@@ -8,7 +8,7 @@ import moment from 'moment';
 Vue.config.productionTip = false;
 import Element from 'element-ui';
 Vue.use(Element);
-import echarts from 'echarts';
+import * as echarts from 'echarts';
 import 'echarts-liquidfill';
 Vue.prototype.$echarts = echarts;
 //引入样式

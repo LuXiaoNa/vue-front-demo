@@ -2,7 +2,7 @@
   <div>
     <el-row :gutter="5">
       <el-col :span="4">
-        <el-card :body-style="{ padding: '0px' }" style="height: 17vh">
+        <el-card :body-style="{ padding: '0px' }" style="height: 18vh">
           <!-- 今日情况 -->
           <todaySituation
             :flightData="situationData"
@@ -12,13 +12,13 @@
         <!-- 流控受影响情况 -->
         <el-card
           :body-style="{ padding: '0px' }"
-          style="margin-top: 5px; height: 425px"
+          style="margin-top: 5px; height: 415px"
         >
           <span> <i class="el-icon-d-arrow-right"></i>流控受影响情况 </span>
           <vue-seamless-scroll
             :data="flowControlData"
             :class-option="flowClassOption"
-            style="height: 410px; overflow: hidden"
+            style="height: 405px; overflow: hidden"
           >
             <div v-for="item in flowControlData" :key="item.id">
               <div class="lineStyle">
@@ -71,7 +71,7 @@
           :body-style="{ padding: '0px' }"
           style="
             margin-top: 5px;
-            height: calc(100vh - 17vh - 425px - 40px);
+            height: calc(100vh - 18vh - 415px - 40px);
             overflow-y: auto;
           "
         >
@@ -83,7 +83,7 @@
         <!-- 机场综合情况组件 -->
         <airportSituation
           :airportSituationData="airportSituationData"
-          style="height: 17vh"
+          style="height: 18vh"
         ></airportSituation>
         <el-row :gutter="5">
           <el-col :span="17">
@@ -97,7 +97,7 @@
             <!-- 流量预测信息 -->
             <el-card
               :body-style="{ padding: '0px' }"
-              style="height: calc(58vh - 50px); margin-top: 5px"
+              style="height: calc(58vh - 46px); margin-top: 5px"
             >
               <flow :flowData="flowData"></flow>
             </el-card>
@@ -129,7 +129,7 @@
             </el-card>
             <el-card
               :body-style="{ paddng: '0px' }"
-              style="margin-top: 5px; height: calc(38vh - 50px)"
+              style="margin-top: 5px; height: calc(38vh - 46px)"
             >
               <!-- 航班保障情况 -->
               <flight :flightData="flightData"></flight>
@@ -138,7 +138,7 @@
         </el-row>
       </el-col>
       <el-col :span="5">
-        <el-card :body-style="{ padding: '0px' }" style="height: 17vh">
+        <el-card :body-style="{ padding: '0px' }" style="height: 18vh">
           <span> <i class="el-icon-d-arrow-right"></i>MDRS信息 </span>
           <vue-seamless-scroll
             :data="mdrsListData"
@@ -180,7 +180,7 @@
         <!-- 值班信息 -->
         <el-card
           :body-style="{ padding: '0px' }"
-          style="margin-top: 5px; height: calc(58vh - 40px)"
+          style="margin-top: 5px; height: calc(57vh - 40px)"
         >
           <duty :dutyData="dutydata" style="overflow: auto"></duty>
         </el-card>
