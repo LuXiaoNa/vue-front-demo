@@ -1,5 +1,5 @@
 //今日情况
-const situationData = {
+const todaySituationData = {
     browse: "40",
     buy: "10",
     ship: "100",
@@ -202,12 +202,12 @@ const dutyData = [{
 module.exports = [
     //今日情况
     {
-        url: '/monitor/situationData',
+        url: '/monitor/todaySituationData',
         type: 'get',
         response: () => {
             return {
                 code: 1,
-                data: situationData,
+                data: todaySituationData,
             }
         }
     },

@@ -1,9 +1,9 @@
 import request from '@/utils/request'
 
 //今日情况获取数据
-export function getSituationData(data) {
+export function getTodaySituationData(data) {
     return request({
-        url: '/monitor/situationData',
+        url: '/monitor/todaySituationData',
         method: 'get',
         params: data
     })

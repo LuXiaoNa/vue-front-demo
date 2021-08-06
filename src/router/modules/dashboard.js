@@ -25,6 +25,15 @@ const dashboardRouter = {
                 title: '分析页'
             }
         },
+        {
+            path: 'specialEcharts',
+            component: () =>
+                import ('@/views/dashboard/specialEcharts'),
+            name: 'specialEcharts',
+            meta: {
+                title: '特殊图'
+            }
+        },
 
     ]
 }

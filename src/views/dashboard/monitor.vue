@@ -201,7 +201,7 @@ import weather from "./weather";
 import duty from "./duty";
 import vueSeamlessScroll from "./scroll";
 import {
-  getSituationData,
+  getTodaySituationData,
   getflowControlData,
   getVipGuestData,
   getAirportSituationData,
@@ -331,7 +331,7 @@ export default {
     },
     //今日航班执行情况
     flightStatus() {
-      getSituationData().then((res) => {
+      getTodaySituationData().then((res) => {
         this.situationData = res.data;
         this.perc = (this.situationData.buy / this.situationData.browse) * 100;
       });

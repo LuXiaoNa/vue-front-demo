@@ -7,10 +7,7 @@
   </div>
 </template>
 <script>
-// import { 
-//   flowData
-// } from "@/api/dashboard/dashboard.js";
-import echarts from "echarts";
+import * as echarts from "echarts";
 export default {
   name: "flow",
   props:["flowData"],

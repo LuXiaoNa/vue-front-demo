@@ -9,9 +9,8 @@ Vue.config.productionTip = false;
 import Element from 'element-ui';
 Vue.use(Element);
 import echarts from 'echarts';
+import 'echarts-liquidfill';
 Vue.prototype.$echarts = echarts;
-import scroll from 'vue-seamless-scroll';
-Vue.use(scroll);
 //引入样式
 // 组件全局注册
 import '@/styles/common.css';
