@@ -58,13 +58,13 @@ export default {
           //清空选项
           this.$refs.multipleTable.clearSelection();
           for (let i = 0; i < this.tableData.length; i++) {
-            if (this.tableData[i].check == true) {
+            // if (this.tableData[i].check == true) {
               //回显打勾
               this.$refs.multipleTable.toggleRowSelection(
                 this.tableData[i],
-                true
+                this.tableData[i].check
               );
-            }
+            // }
           }
         });
       });
