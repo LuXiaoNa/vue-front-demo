@@ -10,7 +10,7 @@ const tableRouter = {
     children: [{
             path: 'tableBase',
             component: () =>
-                import('@/views/table/tableBase'),
+                import ('@/views/table/tableBase'),
             name: 'tableBase',
             meta: {
                 title: '基础表格'
@@ -19,7 +19,7 @@ const tableRouter = {
         {
             path: 'exportTable',
             component: () =>
-                import('@/views/table/exportTable'),
+                import ('@/views/table/exportTable'),
             name: 'exportTable',
             meta: {
                 title: '导出表格'
@@ -28,10 +28,19 @@ const tableRouter = {
         {
             path: 'sortTable',
             component: () =>
-                import('@/views/table/sortTable'),
+                import ('@/views/table/sortTable'),
             name: 'sortTable',
             meta: {
                 title: '拖拽表格'
+            }
+        },
+        {
+            path: 'selectTable',
+            component: () =>
+                import ('@/views/table/selectTable'),
+            name: 'selectTable',
+            meta: {
+                title: '回显勾选表格'
             }
         },
     ]
