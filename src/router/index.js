@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import dashboardRouter from './modules/dashboard'
 import tableRouter from './modules/table'
 import formRouter from './modules/form'
+import mapRouter from './modules/map'
 import Layout from '@/views/layout/index.vue'
 Vue.use(Router)
 export const constantRoutes = [{
@@ -13,6 +14,7 @@ export const constantRoutes = [{
     dashboardRouter,
     tableRouter,
     formRouter,
+    mapRouter,
     {
         path: '/404',
         component: () =>

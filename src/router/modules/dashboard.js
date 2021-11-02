@@ -2,7 +2,7 @@ import Layout from '@/views/layout/index.vue'
 const dashboardRouter = {
     path: '/dashboard',
     component: Layout,
-    redirect: '/dashboard/analysis',
+    redirect: '/dashboard/monitor',
     name: 'dashboard',
     meta: {
         title: '仪表盘',

@@ -2,10 +2,11 @@
 const path = require('path')
 
 module.exports = {
+    publicPath: "./",
     devServer: {
         proxy: {
             "/api": {
-                //target: "", // 目标代理接口地址
+                target: "http://localhost:9996", // 目标代理接口地址
                 secure: false,
                 changeOrigin: true, // 开启代理，在本地创建一个虚拟服务端
                 ws: true,
