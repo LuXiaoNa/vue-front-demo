@@ -4,6 +4,7 @@ import dashboardRouter from './modules/dashboard'
 import tableRouter from './modules/table'
 import formRouter from './modules/form'
 import mapRouter from './modules/map'
+import videoRouter from './modules/video'
 import Layout from '@/views/layout/index.vue'
 Vue.use(Router)
 export const constantRoutes = [{
@@ -15,6 +16,7 @@ export const constantRoutes = [{
     tableRouter,
     formRouter,
     mapRouter,
+    videoRouter,
     {
         path: '/404',
         component: () =>
