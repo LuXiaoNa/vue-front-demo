@@ -8,21 +8,31 @@ const formRouter = {
         title: '表单',
     },
     children: [{
-        path: 'baseForm',
-        component: () =>
-            import ('@/views/form/baseForm'),
-        name: 'baseForm',
-        meta: {
-            title: '基础表单'
+            path: 'baseForm',
+            component: () =>
+                import ('@/views/form/baseForm'),
+            name: 'baseForm',
+            meta: {
+                title: '基础表单'
+            }
+        }, {
+            path: 'advancedForm',
+            component: () =>
+                import ('@/views/form/advancedForm'),
+            name: 'advancedForm',
+            meta: {
+                title: '高级表单'
+            }
+        },
+        {
+            path: 'editor',
+            component: () =>
+                import ('@/views/form/editor'),
+            name: 'editor',
+            meta: {
+                title: '富文本编辑器'
+            }
         }
-    }, {
-        path: 'advancedForm',
-        component: () =>
-            import ('@/views/form/advancedForm'),
-        name: 'advancedForm',
-        meta: {
-            title: '高级表单'
-        }
-    }]
+    ]
 }
 export default formRouter

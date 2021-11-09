@@ -5,7 +5,7 @@ const mapRouter = {
     redirect: '/map/simpleMap',
     name: 'map',
     meta: {
-        title: '表单',
+        title: '地图',
     },
     children: [{
         path: 'simpleMap',
