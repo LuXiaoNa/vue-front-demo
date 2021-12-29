@@ -2,34 +2,34 @@ import Layout from '@/views/layout/index.vue'
 const dashboardRouter = {
     path: '/dashboard',
     component: Layout,
-    redirect: '/dashboard/monitor',
+    redirect: '/dashboard/Monitor',
     name: 'dashboard',
     meta: {
         title: '仪表盘',
     },
     children: [{
-            path: 'monitor',
+            path: 'Monitor',
             component: () =>
-                import ('@/views/dashboard/monitor'),
-            name: 'monitor',
+                import ('@/views/dashboard/Monitor'),
+            name: 'Monitor',
             meta: {
                 title: '监控页'
             }
         },
         {
-            path: 'analysis',
+            path: 'Analysis',
             component: () =>
-                import ('@/views/dashboard/analysis'),
-            name: 'analysis',
+                import ('@/views/dashboard/Analysis'),
+            name: 'Analysis',
             meta: {
                 title: '分析页'
             }
         },
         {
-            path: 'specialEcharts',
+            path: 'SpecialEcharts',
             component: () =>
-                import ('@/views/dashboard/specialEcharts'),
-            name: 'specialEcharts',
+                import ('@/views/dashboard/SpecialEcharts'),
+            name: 'SpecialEcharts',
             meta: {
                 title: '特殊图'
             }

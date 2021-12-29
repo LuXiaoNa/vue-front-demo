@@ -12,6 +12,7 @@ import * as echarts from 'echarts';
 import 'echarts-liquidfill';
 Vue.prototype.$echarts = echarts;
 import '@/components/ef/index.css'
+import 'animate.css';
 //引入样式
 // 组件全局注册
 import '@/styles/common.css';

@@ -2,7 +2,7 @@ import Layout from '@/views/layout/index.vue'
 const formRouter = {
     path: '/form',
     component: Layout,
-    redirect: '/form/baseForm',
+    redirect: '/form/BaseForm',
     name: 'form',
     meta: {
         title: '表单',
@@ -10,25 +10,25 @@ const formRouter = {
     children: [{
             path: 'baseForm',
             component: () =>
-                import ('@/views/form/baseForm'),
-            name: 'baseForm',
+                import ('@/views/form/BaseForm'),
+            name: 'BaseForm',
             meta: {
                 title: '基础表单'
             }
         }, {
-            path: 'advancedForm',
+            path: 'AdvancedForm',
             component: () =>
-                import ('@/views/form/advancedForm'),
-            name: 'advancedForm',
+                import ('@/views/form/AdvancedForm'),
+            name: 'AdvancedForm',
             meta: {
                 title: '高级表单'
             }
         },
         {
-            path: 'editor',
+            path: 'Editor',
             component: () =>
-                import ('@/views/form/editor'),
-            name: 'editor',
+                import ('@/views/form/Editor'),
+            name: 'Editor',
             meta: {
                 title: '富文本编辑器'
             }

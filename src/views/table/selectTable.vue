@@ -8,6 +8,7 @@
       height="95vh"
       @select-all="selectAll"
       stripe
+      style="animation: bounceInLeft;animation-duration: 2s;"
     >
       <el-table-column
         type="selection"

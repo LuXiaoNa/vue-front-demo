@@ -3,7 +3,7 @@
     <el-button type="primary" @click="exportTable" icon="el-icon-download"
       >导出数据</el-button
     >
-    <el-table :data="tableData" border style="width: 100%">
+    <el-table :data="tableData" border style="width: 100%;animation: bounceInLeft;animation-duration: 2s;">
       <el-table-column prop="order" label="序号" width="150"> </el-table-column>
       <el-table-column prop="name" label="店名"> </el-table-column>
       <el-table-column prop="visiter" label="浏览量"> </el-table-column>

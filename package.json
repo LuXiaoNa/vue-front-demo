@@ -11,6 +11,7 @@
     },
     "dependencies": {
         "af-table-column": "^1.0.3",
+        "animate.css": "^4.1.1",
         "core-js": "^3.6.5",
         "echarts": "^5.0.1",
         "echarts-liquidfill": "^3.0.0",

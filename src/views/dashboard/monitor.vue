@@ -4,10 +4,10 @@
       <el-col :span="4">
         <el-card :body-style="{ padding: '0px' }" style="height: 18vh">
           <!-- 今日情况 -->
-          <todaySituation
+          <today-situation
             :flightData="situationData"
             :perc="perc"
-          ></todaySituation>
+          ></today-situation>
         </el-card>
         <!-- 流控受影响情况 -->
         <el-card
@@ -75,16 +75,16 @@
             overflow-y: auto;
           "
         >
-          <specialPlan :VipGuestData="VipGuestData"></specialPlan>
+          <special-plan :VipGuestData="VipGuestData"></special-plan>
         </el-card>
       </el-col>
       <!-- 中间栏 -->
       <el-col :span="15">
         <!-- 机场综合情况组件 -->
-        <airportSituation
+        <airport-situation
           :airportSituationData="airportSituationData"
           style="height: 18vh"
-        ></airportSituation>
+        ></airport-situation>
         <el-row :gutter="5">
           <el-col :span="17">
             <!-- 当日放行情况 -->
@@ -116,7 +116,7 @@
                 <div class="flex5"></div>
                 <div class="flex6">空闲</div>
               </div>
-              <processBar
+              <process-bar
                 v-for="item in processBarModel"
                 :key="item.id"
                 :seatType="item.seatType"
@@ -190,15 +190,15 @@
 </template>
 
 <script>
-import todaySituation from "./todaySituation";
-import processBar from "./processBar";
-import airportSituation from "./airportSituation";
-import specialPlan from "./specialPlan";
-import flow from "./flow";
-import release from "./release";
-import flight from "./flight";
-import weather from "./weather";
-import duty from "./duty";
+import todaySituation from "./TodaySituation";
+import processBar from "./ProcessBar";
+import airportSituation from "./AirportSituation";
+import specialPlan from "./SpecialPlan";
+import flow from "./Flow";
+import release from "./Release";
+import flight from "./Flight";
+import weather from "./Weather";
+import duty from "./Duty";
 import vueSeamlessScroll from "./scroll";
 import {
   getTodaySituationData,

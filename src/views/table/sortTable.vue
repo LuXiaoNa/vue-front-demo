@@ -1,6 +1,6 @@
 <template>
   <div style="width: 800px">
-    <el-table :data="tableData" border row-key="id" align="left">
+    <el-table :data="tableData" border row-key="id" align="left" style="animation: bounceInLeft;animation-duration: 2s;">
       <el-table-column
         v-for="(item, index) in col"
         :key="`col_${index}`"

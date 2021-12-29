@@ -2,43 +2,43 @@ import Layout from '@/views/layout/index.vue'
 const tableRouter = {
     path: '/table',
     component: Layout,
-    redirect: '/table/tableBase',
+    redirect: '/table/TableBase',
     name: 'table',
     meta: {
         title: '表格',
     },
     children: [{
-            path: 'tableBase',
+            path: 'TableBase',
             component: () =>
-                import ('@/views/table/tableBase'),
-            name: 'tableBase',
+                import ('@/views/table/TableBase'),
+            name: 'TableBase',
             meta: {
                 title: '基础表格'
             }
         },
         {
-            path: 'exportTable',
+            path: 'ExportTable',
             component: () =>
-                import ('@/views/table/exportTable'),
-            name: 'exportTable',
+                import ('@/views/table/ExportTable'),
+            name: 'ExportTable',
             meta: {
                 title: '导出表格'
             }
         },
         {
-            path: 'sortTable',
+            path: 'SortTable',
             component: () =>
-                import ('@/views/table/sortTable'),
-            name: 'sortTable',
+                import ('@/views/table/SortTable'),
+            name: 'SortTable',
             meta: {
                 title: '拖拽表格'
             }
         },
         {
-            path: 'selectTable',
+            path: 'SelectTable',
             component: () =>
-                import ('@/views/table/selectTable'),
-            name: 'selectTable',
+                import ('@/views/table/SelectTable'),
+            name: 'SelectTable',
             meta: {
                 title: '回显勾选表格'
             }
