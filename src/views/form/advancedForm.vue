@@ -205,8 +205,8 @@
         </el-table>
       </el-card>
     </el-row>
-    <el-row>
-      <el-col :span="3" :offset="21">
+    <el-row gutter="22" style="margin-top:10px"> 
+      <el-col :span="5" :offset="19">
         <el-button type="primary" @click="resetData">重置</el-button>
         <el-button type="primary" @click="saveData">提交</el-button>
       </el-col>

@@ -1,10 +1,12 @@
 <template>
   <div>
-    <el-row :gutter="22">
+    <el-row :gutter="12">
       <el-col :span="24">
         <lique v-for="item in liqueData" :key="item.id" :Data="item"></lique>
       </el-col>
-      <el-col :span="6" style="margin-top:10px;margin-left:10px">
+    </el-row>
+    <el-row>
+      <el-col :span="6" style="margin-top: 10px; margin-left: 10px">
         <el-card class="box-card">
           <div ref="gaugeEchart" style="height: 210px"></div>
         </el-card>

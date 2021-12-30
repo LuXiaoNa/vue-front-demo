@@ -61,25 +61,20 @@ const liqueData = [{
     }
 }, {
     "tableData": [{
-            name: "节点10",
+            name: "节点1",
             finish: 18,
             sumCount: 60,
         },
         {
-            name: "节点11",
+            name: "节点4",
             finish: 5,
             sumCount: 44,
         },
         {
-            name: "节点12",
+            name: "节点6",
             finish: 15,
             sumCount: 40,
         },
-        {
-            name: "节点13",
-            finish: 12,
-            sumCount: 40,
-        }
     ],
     "liqueImplement": {
         name: "位置4",

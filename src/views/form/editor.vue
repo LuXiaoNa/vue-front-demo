@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div id="editor" style="margin-top:30px"></div>
-    <div style="margin-top: 30px; text-align: center">
+    <div id="editor"></div>
+    <div style="margin-top: 10px; text-align: center">
       <el-button @click="sumbit" type="primary">提交</el-button>
       <el-button @click="cancel" type="primary">清空</el-button>
     </div>
@@ -20,8 +20,8 @@ export default {
   methods: {
     initData() {
       this.editor = new wangeditor("#editor");
-      // 设置编辑区域高度为 500px
-      this.editor.config.height = 450;
+      // 设置编辑区域高度为 420px
+      this.editor.config.height = 420;
       console.log(this.editor.txt.text());
       this.editor.create();
     },

@@ -3,31 +3,35 @@
     <el-col :span="6">
       <!-- <div :style="backStyle" class="backClass"> -->
       <el-card class="box-card">
-        <div style="float: left; width: 110px; padding-bottom: 20px">
-          <div style="height: 160px" ref="liqiuChart"></div>
-          <div style="text-align: center">
-            <span style="color: #60cef4">{{ Data.liqueImplement.finish }}</span>
-            <span>/{{ Data.liqueImplement.sumCount }}</span>
-          </div>
-        </div>
-        <div style="float: right">
-          <el-table
-            empty-text="暂无数据"
-            :data="Data.tableData"
-            width="230px"
-            border
-            stripe
-            :show-header="false"
-          >
-            <el-table-column prop="name" label="名称"></el-table-column>
-            <el-table-column prop="finish" label="数量">
-              <template slot-scope="scope">
-                <span style="color: #60cef4">{{ scope.row.finish }}</span>
-                <span>/{{ scope.row.sumCount }}</span>
-              </template>
-            </el-table-column>
-          </el-table>
-        </div>
+        <el-row>
+          <el-col :span="9">
+            <div style="height: 130px" ref="liqiuChart"></div>
+            <div style="text-align: center">
+              <span style="color: #60cef4">{{
+                Data.liqueImplement.finish
+              }}</span>
+              <span>/{{ Data.liqueImplement.sumCount }}</span>
+            </div>
+          </el-col>
+          <el-col :span="15">
+            <el-table
+              empty-text="暂无数据"
+              :data="Data.tableData"
+              border
+              stripe
+              :show-header="false"
+              class="animate__animated animate__tada"
+            >
+              <el-table-column prop="name" label="名称" width="60px"></el-table-column>
+              <el-table-column prop="finish" label="数量" width="67px">
+                <template slot-scope="scope">
+                  <span style="color: #60cef4">{{ scope.row.finish }}</span>
+                  <span>/{{ scope.row.sumCount }}</span>
+                </template>
+              </el-table-column>
+            </el-table>
+          </el-col>
+        </el-row>
       </el-card>
       <!-- </div> -->
     </el-col>
@@ -84,9 +88,9 @@ export default {
         series: [
           {
             type: "liquidFill",
-            radius: "75%",
+            radius: "78%",
             name: "",
-            center: ["50%", "60%"],
+            center: ["40%", "50%"],
             shape: "circle",
             phase: 0,
             direction: "right",
@@ -106,7 +110,7 @@ export default {
             },
             //图形上的文本标签
             label: {
-              fontSize: 25,
+              fontSize: 16,
               fontWeight: 200,
             },
             data: [], //系列中的数据内容数组
