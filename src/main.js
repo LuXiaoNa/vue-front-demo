@@ -13,11 +13,9 @@ import 'echarts-liquidfill';
 Vue.prototype.$echarts = echarts;
 import '@/components/ef/index.css'
 import 'animate.css';
+import '@/directives/dialogDrag.js'
 //引入样式
-// 组件全局注册
 import '@/styles/common.css';
-// import "@/styles/theme/theme-dark.css"
-// import "@/styles/theme/change.css"
 
 //开发环境下使用mock.js
 if (process.env.NODE_ENV == "development") {

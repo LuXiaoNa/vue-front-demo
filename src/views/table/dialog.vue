@@ -1,5 +1,6 @@
 <template>
   <el-dialog
+    v-dialogDrag
     :visible.sync="visible"
     :title="modalObj.dialogTitle"
     :width="modalObj.width"
@@ -15,24 +16,21 @@
       label-width="100px"
     >
       <el-form-item label="店名" prop="name">
-        <el-input
-          v-model="ruleForm.name"
-          placeholder="请输入店名"
-        ></el-input>
+        <el-input v-model="ruleForm.name" placeholder="请输入店名"></el-input>
       </el-form-item>
-        <el-form-item label="浏览量" prop="visiter">
+      <el-form-item label="浏览量" prop="visiter">
         <el-input
           v-model="ruleForm.visiter"
           placeholder="请输入浏览量"
         ></el-input>
       </el-form-item>
-        <el-form-item label="订单量" prop="orderQuantity">
+      <el-form-item label="订单量" prop="orderQuantity">
         <el-input
           v-model="ruleForm.orderQuantity"
           placeholder="请输入订单量"
         ></el-input>
       </el-form-item>
-        <el-form-item label="销售额" prop="sellMoney">
+      <el-form-item label="销售额" prop="sellMoney">
         <el-input
           v-model="ruleForm.sellMoney"
           placeholder="请输入销售额"
@@ -41,10 +39,7 @@
       <!--弹出层按钮居中-->
       <div style="text-align: center">
         <el-button @click="modalClose" size="small">取消</el-button>
-        <el-button
-          type="primary"
-          @click="submitForm"
-          size="small"
+        <el-button type="primary" @click="submitForm" size="small"
           >保存</el-button
         >
       </div>
@@ -66,7 +61,7 @@ export default {
       }
     };
     return {
-      ruleForm: { },
+      ruleForm: {},
       rules: {
         name: [
           { required: true, message: "请输入店名!", trigger: "blur" },
@@ -84,14 +79,14 @@ export default {
       type: Object,
       required: false,
     },
-    formData:{
+    formData: {
       type: Object,
       required: false,
     },
   },
   mounted() {
     //表单初始
-    this.ruleForm = this.formData
+    this.ruleForm = this.formData;
   },
   methods: {
     // 信息提交
