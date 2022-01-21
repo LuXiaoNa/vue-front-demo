@@ -54,12 +54,8 @@
             "node": true
         },
         "extends": [
-            "plugin:vue/essential",
-            "eslint:recommended"
+            "plugin:vue/essential"
         ],
-        "parserOptions": {
-            "parser": "babel-eslint"
-        },
         "rules": {
             "no-unused-vars": "off"
         }
@@ -68,8 +64,5 @@
         "> 1%",
         "last 2 versions",
         "not dead"
-    ],
-    "author": "",
-    "license": "ISC",
-    "description": ""
+    ]
 }

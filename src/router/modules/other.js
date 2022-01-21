@@ -16,6 +16,22 @@ const otherRouter = {
             title: '流程图'
         }
     }, {
+        path: 'EasyFlowPanel',
+        component: () =>
+            import ('@/views/other/EasyFlowPanel'),
+        name: 'EasyFlowPanel',
+        meta: {
+            title: '封装流程图'
+        }
+    }, {
+        path: 'TestEasyFlow',
+        component: () =>
+            import ('@/views/other/TestEasyFlow'),
+        name: 'TestEasyFlow',
+        meta: {
+            title: '模拟跨域调用流程图'
+        }
+    }, {
         path: 'Video',
         component: () =>
             import ('@/views/other/Video'),
