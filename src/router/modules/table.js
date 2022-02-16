@@ -26,6 +26,15 @@ const tableRouter = {
             }
         },
         {
+            path: 'ExportMoreSheetTable',
+            component: () =>
+                import ('@/views/table/ExportMoreSheetTable'),
+            name: 'ExportMoreSheetTable',
+            meta: {
+                title: '导出多列表格'
+            }
+        },
+        {
             path: 'SortTable',
             component: () =>
                 import ('@/views/table/SortTable'),
