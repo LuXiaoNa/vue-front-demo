@@ -55,6 +55,14 @@ const otherRouter = {
         meta: {
             title: '动画效果'
         }
+    }, {
+        path: 'Gante',
+        component: () =>
+            import ('@/views/other/Gante'),
+        name: 'Gante',
+        meta: {
+            title: '甘特图'
+        }
     }]
 }
 export default otherRouter

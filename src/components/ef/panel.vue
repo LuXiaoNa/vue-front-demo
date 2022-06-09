@@ -106,7 +106,7 @@
         // 一些基础配置移动该文件中
         mixins: [easyFlowMixin],
         components: {
-            draggable, flowNode, nodeMenu, FlowInfo, FlowNodeForm, FlowHelp
+             flowNode, nodeMenu, FlowInfo, FlowNodeForm, FlowHelp
         },
         directives: {
             'flowDrag': {
@@ -381,7 +381,7 @@
                  * 这里可以进行业务判断、是否能够添加该节点
                  */
                 this.data.nodeList.push(node)
-                this.$nextTick(function () {
+                this.$nextTick(function () { 
                     this.jsPlumb.makeSource(nodeId, this.jsplumbSourceOptions)
                     this.jsPlumb.makeTarget(nodeId, this.jsplumbTargetOptions)
                     this.jsPlumb.draggable(nodeId, {

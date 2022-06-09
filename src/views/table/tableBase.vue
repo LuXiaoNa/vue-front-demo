@@ -71,7 +71,6 @@ export default {
   },
   mounted() {
     this.initData();
-    this.a();
   },
 };
 </script>

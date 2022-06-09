@@ -7,6 +7,7 @@ const monitor = require('./modules/monitor')
 const form = require('./modules/form')
 const specialEcharts = require('./modules/specialEcharts')
 const ef = require('./modules/ef')
+const gante = require('./modules/gante')
 
 const mocks = [
     ...analysis,
@@ -15,6 +16,7 @@ const mocks = [
     ...tableBase,
     ...form,
     ...ef,
+    ...gante,
 ]
 
 function mockXHR() {
